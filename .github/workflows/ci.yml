@@ -10,12 +10,12 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - [cite_start]uses: actions/checkout@v4 [cite: 96]
+      - [cite_start]uses: actions/setup-node@v4 [cite: 97]
         with:
-          node-version: "18"
-      - run: npm ci
-      - run: npm run lint # Ensure you have a lint script in package.json
+          [cite_start]node-version: "18" [cite: 200]
+      - [cite_start]run: npm ci [cite: 98]
+      - [cite_start]run: npm run lint [cite: 99, 205] # This must match your package.json script
 
   test:
     needs: lint
