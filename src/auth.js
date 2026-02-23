@@ -1,6 +1,11 @@
 const { findUser } = require("./users");
 
 function login(username, password) {
+  // Check if username and password are provided, are strings, and are not empty
+  if (typeof username !== 'string' || username.trim() === '' || 
+      typeof password !== 'string' || password.trim() === '') {
+    return { success: false, message: "Invalid input: Username and password are required strings" };
+  }
   const user = findUser(username);
 
   if (!user) {
