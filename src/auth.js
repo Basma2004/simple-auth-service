@@ -12,14 +12,17 @@ function login(username, password) {
   }
   const user = findUser(username);
 
+ // Task 5: Audit Logging for "User not found"
   if (!user) {
-    return { success: false, message: "Invalid credentials" };
+    console.log(`[AUDIT] Failed login attempt: Username "${username}" not found at ${new Date().toISOString()}`);
+    return { success: false, message: "User not found" };
   }
 
+  // Task 5: Audit Logging for "Invalid password"
   if (user.password !== password) {
-    return { success: false, message: "Invalid credentials"};
+    console.log(`[AUDIT] Failed login attempt: Invalid password for user "${username}" at ${new Date().toISOString()}`);
+    return { success: false, message: "Invalid password" };
   }
-
   return {
     success: true,
     message: "Login successful",
