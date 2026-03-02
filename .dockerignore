@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules/
+
+# Version control
+.git
+.gitignore
+
+# Log files
+*.log
+npm-debug.log*
