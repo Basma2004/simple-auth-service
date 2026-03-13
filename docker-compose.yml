@@ -1,9 +1,7 @@
-version:"3.8"
-
 services:
-  auth-service:
-    build: .
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
+  auth-service:        # Indented 2 spaces
+    build: .           # Indented 4 spaces
+    ports:             # Indented 4 spaces
+      - "3000:3000"    # Indented 6 spaces
+    environment:       # Indented 4 spaces
+      - NODE_ENV=production # Indented 6 spaces
