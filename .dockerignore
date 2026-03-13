@@ -2,9 +2,15 @@
 node_modules/
 
 # Version control
-.git
-.gitignore
+.git/
 
 # Log files
 *.log
 npm-debug.log*
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Environment secrets (Best practice for Enterprise Architecture)
+.env
